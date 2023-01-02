@@ -1,6 +1,3 @@
-.what-we-do {
-}
-
 .what-we-do_list {
   display: flex;
   justify-content: space-between;
@@ -13,4 +10,10 @@
   line-height: var(--title1-height);
   text-align: center;
   text-transform: capitalize;
+}
+
+@media screen and(max-width:1157px) {
+  .what-we-do {
+    display: none;
+  }
 }

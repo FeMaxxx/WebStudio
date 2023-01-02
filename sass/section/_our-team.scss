@@ -12,16 +12,22 @@
 }
 
 .our-team_list {
-  display: flex;
-  justify-content: space-between;
 }
 
 .our-team_point {
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
+}
+
+.our-team_point:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .our-team_text-box {
@@ -57,7 +63,6 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  cursor: pointer;
 
   transition: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,5 +74,24 @@
 
   .icon {
     fill: #ffffff;
+  }
+}
+
+@media screen and(min-width:768px) {
+  .our-team_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 64px 24px;
+  }
+
+  .our-team_point {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .our-team_point:not(:last-child) {
+    margin-bottom: 0px;
   }
 }

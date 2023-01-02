@@ -31,10 +31,23 @@
     <!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼HEADER▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <header class="header">
       <div class="container">
-        <nav class="header_nav">
-          <a class="logo" href="./index.html"
-            ><span class="logo_accent">Web</span>Studio</a
+        <a class="logo" href="./index.html"
+          ><span class="logo_accent">Web</span>Studio</a
+        >
+        <button
+          class="mobile-menu_open-button"
+          type="button"
+          data-menu-open
+        >
+          <svg
+            class="mobile-menu_open-icon"
+            width="40"
+            height="40"
           >
+            <use href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
+        <nav class="header_nav">
           <ul class="header_nav-list">
             <li>
               <a class="header_nav-link activ" href="#"
@@ -73,6 +86,89 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-manu" data-menu>
+        <button
+          class="mobile-manu_close-button"
+          data-menu-close
+        >
+          <svg
+            class="mobile-manu_close-icon"
+            width="24"
+            height="24"
+          >
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="mobile-manu_nav">
+          <li class="mobile-manu_nav-point">
+            <a class="mobile-manu_nav-link activ" href="#"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-manu_nav-point">
+            <a
+              class="mobile-manu_nav-link"
+              href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-manu_nav-point">
+            <a class="mobile-manu_nav-link" href="#"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-manu_contacts">
+          <a
+            class="mobile-manu_tel-link"
+            href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+          <a
+            class="mobile-manu_mail-link"
+            href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </div>
+        <ul class="mobile-manu_icon-list">
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#instagram"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#twitter"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#facebook"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#linkedin"
+                ></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲HEADER▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
@@ -177,6 +273,7 @@
             <li>
               <img
                 class="what-we-do_img"
+                srcset="./images/desktop/wawd1@2x.jpg 2x"
                 src="./images/desktop/wawd1.jpg"
                 alt="Project photo"
                 width="360"
@@ -185,6 +282,7 @@
             <li>
               <img
                 class="what-we-do_img"
+                srcset="./images/desktop/wawd2@2x.jpg 2x"
                 src="./images/desktop/wawd2.jpg"
                 alt="Project photo"
                 width="360"
@@ -193,6 +291,7 @@
             <li>
               <img
                 class="what-we-do_img"
+                srcset="./images/desktop/wawd3@2x.jpg 2x"
                 src="./images/desktop/wawd3.jpg"
                 alt="Project photo"
                 width="360"
@@ -210,7 +309,10 @@
             <li class="our-team_point">
               <img
                 class="our-team_img"
-                src="./images/desktop/our-team1.jpg"
+                srcset="
+                  ./images/our-team/our-team1@2x.jpg 2x
+                "
+                src="./images/our-team/our-team1.jpg"
                 alt="Person photo"
                 width="264"
               />
@@ -280,7 +382,10 @@
             <li class="our-team_point">
               <img
                 class="our-team_img"
-                src="./images/desktop/our-team2.jpg"
+                srcset="
+                  ./images/our-team/our-team2@2x.jpg 2x
+                "
+                src="./images/our-team/our-team2.jpg"
                 alt="Person photo"
                 width="264"
               />
@@ -350,7 +455,10 @@
             <li class="our-team_point">
               <img
                 class="our-team_img"
-                src="./images/desktop/our-team3.jpg"
+                srcset="
+                  ./images/our-team/our-team3@2x.jpg 2x
+                "
+                src="./images/our-team/our-team3.jpg"
                 alt="Person photo"
                 width="264"
               />
@@ -420,7 +528,10 @@
             <li class="our-team_point">
               <img
                 class="our-team_img"
-                src="./images/desktop/our-team4.jpg"
+                srcset="
+                  ./images/our-team/our-team4@2x.jpg 2x
+                "
+                src="./images/our-team/our-team4.jpg"
                 alt="Person photo"
                 width="264"
               />
@@ -741,7 +852,7 @@
       </div>
     </section>
     <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲MODAL-WINDOW▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

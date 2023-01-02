@@ -68,3 +68,15 @@
 .projects_paragrad {
   color: var(--text-color2);
 }
+
+@media screen and(min-width:768px) {
+  .projects_list {
+    gap: 72px 24px;
+  }
+}
+
+@media screen and(min-width:1158px) {
+  .projects_list {
+    gap: 48px 24px;
+  }
+}

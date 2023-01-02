@@ -31,10 +31,23 @@
     <!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼HEADER▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <header class="header">
       <div class="container">
-        <nav class="header_nav">
-          <a class="logo" href="./index.html"
-            ><span class="logo_accent">Web</span>Studio</a
+        <a class="logo" href="./index.html"
+          ><span class="logo_accent">Web</span>Studio</a
+        >
+        <button
+          class="mobile-menu_open-button"
+          type="button"
+          data-menu-open
+        >
+          <svg
+            class="mobile-menu_open-icon"
+            width="40"
+            height="40"
           >
+            <use href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
+        <nav class="header_nav">
           <ul class="header_nav-list">
             <li>
               <a class="header_nav-link" href="./index.html"
@@ -74,6 +87,90 @@
           </ul>
         </address>
       </div>
+      <!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼MOBILE-MENU▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+      <div class="mobile-manu" data-menu>
+        <button
+          class="mobile-manu_close-button"
+          data-menu-close
+        >
+          <svg
+            class="mobile-manu_close-icon"
+            width="24"
+            height="24"
+          >
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="mobile-manu_nav">
+          <li class="mobile-manu_nav-point">
+            <a
+              class="mobile-manu_nav-link"
+              href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-manu_nav-point">
+            <a class="mobile-manu_nav-link activ" href="#"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-manu_nav-point">
+            <a class="mobile-manu_nav-link" href="#"></a
+            >Contacts
+          </li>
+        </ul>
+        <div class="mobile-manu_contacts">
+          <a
+            class="mobile-manu_tel-link"
+            href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+          <a
+            class="mobile-manu_mail-link"
+            href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </div>
+        <ul class="mobile-manu_icon-list">
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#instagram"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#twitter"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#facebook"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="mobile-manu_icon-link" href="#">
+              <svg class="icon" width="24" height="24">
+                <use
+                  href="./images/sprite.svg#linkedin"
+                ></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲MOBILE-MENU▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
     </header>
     <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲HEADER▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
     <main>
@@ -114,12 +211,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project1.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project1.jpg    1x,
+                        ./images/desktop/project1@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project1.jpg    1x,
+                        ./images/tablet/project1@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project1.jpg    1x,
+                        ./images/mobile/project1@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project1.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -138,12 +261,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project2.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project2.jpg    1x,
+                        ./images/desktop/project2@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project2.jpg    1x,
+                        ./images/tablet/project2@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project2.jpg    1x,
+                        ./images/mobile/project2@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project2.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -162,12 +311,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project3.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project3.jpg    1x,
+                        ./images/desktop/project3@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project3.jpg    1x,
+                        ./images/tablet/project3@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project3.jpg    1x,
+                        ./images/mobile/project3@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project3.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -186,12 +361,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project4.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project4.jpg    1x,
+                        ./images/desktop/project4@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project4.jpg    1x,
+                        ./images/tablet/project4@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project4.jpg    1x,
+                        ./images/mobile/project4@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project4.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -210,12 +411,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project5.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project5.jpg    1x,
+                        ./images/desktop/project5@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project5.jpg    1x,
+                        ./images/tablet/project5@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project5.jpg    1x,
+                        ./images/mobile/project5@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project5.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -234,12 +461,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project6.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project6.jpg    1x,
+                        ./images/desktop/project6@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project6.jpg    1x,
+                        ./images/tablet/project6@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project6.jpg    1x,
+                        ./images/mobile/project6@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project6.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -258,12 +511,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project7.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project7.jpg    1x,
+                        ./images/desktop/project7@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project7.jpg    1x,
+                        ./images/tablet/project7@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project7.jpg    1x,
+                        ./images/mobile/project7@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project7.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -282,12 +561,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project8.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project8.jpg    1x,
+                        ./images/desktop/project8@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project8.jpg    1x,
+                        ./images/tablet/project8@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project8.jpg    1x,
+                        ./images/mobile/project8@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project8.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -306,12 +611,38 @@
             <li>
               <a class="projects_link" href="#">
                 <div class="projects_overlay-box">
-                  <img
-                    class="projects_img"
-                    src="./images/desktop/project9.jpg"
-                    alt="Project photo"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/desktop/project9.jpg    1x,
+                        ./images/desktop/project9@2x.jpg 2x
+                      "
+                      width="360px"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/tablet/project9.jpg    1x,
+                        ./images/tablet/project9@2x.jpg 2x
+                      "
+                      width="356px"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/mobile/project9.jpg    1x,
+                        ./images/mobile/project9@2x.jpg 2x
+                      "
+                      width="100%"
+                      max-width="396px"
+                    />
+                    <img
+                      class="projects_img"
+                      src="./images/mobile/project9.jpg"
+                      alt="Project photo"
+                    />
+                  </picture>
                   <p class="projects_overlay">
                     14 Stylish and User-Friendly App Design
                     Concepts · Task Manager App · Calorie
@@ -413,5 +744,7 @@
       </div>
     </footer>
     <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲FOOTER▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
