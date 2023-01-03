@@ -939,7 +939,12 @@ p {
   margin-bottom: 16px;
 }
 
-@media screen and (max-height: 599px) {
+@media screen and (max-height: 524px) {
+  .modal_message {
+    height: 30px;
+  }
+}
+@media screen and (min-height: 525px) {
   .modal_message {
     height: 40px;
   }
