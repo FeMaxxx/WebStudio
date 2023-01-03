@@ -13,11 +13,9 @@
   }
 }
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 300px) {
   .header {
     .container {
-      margin-left: 0px;
-      margin-right: 0px;
     }
   }
 }
@@ -113,7 +111,7 @@
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .header {
     height: 76px;
   }

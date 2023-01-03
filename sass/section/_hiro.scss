@@ -1,8 +1,12 @@
 .hiro {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 112px;
   padding-bottom: 112px;
 
+  max-width: 428px;
   background-color: var(--bg-color2);
+
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to right,
@@ -58,6 +62,7 @@
 
 @media screen and (min-width: 768px) {
   .hiro {
+    max-width: 768px;
     background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
@@ -88,10 +93,11 @@
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .hiro {
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
     background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
@@ -106,9 +112,9 @@
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
-  screen and (min-resolution: 192dpi) and (min-width: 1158px),
-  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hiro {
     background-image: linear-gradient(
         to right,

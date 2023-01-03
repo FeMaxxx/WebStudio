@@ -10,9 +10,10 @@
   padding-bottom: 96px;
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (max-width: 767px) {
   .container {
-    width: 428px;
+    width: 100%;
+    max-width: 428px;
   }
 }
 
@@ -22,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
   }

@@ -94,9 +94,10 @@ p {
   padding-bottom: 96px;
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (max-width: 767px) {
   .container {
-    width: 428px;
+    width: 100%;
+    max-width: 428px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -104,7 +105,7 @@ p {
     width: 768px;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
   }
@@ -171,7 +172,7 @@ p {
     margin-bottom: 64px;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .portfolio.section {
     padding-top: 96px;
     padding-bottom: 120px;
@@ -327,7 +328,7 @@ p {
     width: 264px;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .footer .container {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -353,12 +354,6 @@ p {
   align-items: center;
 }
 
-@media screen and (max-width: 427px) {
-  .header .container {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
 @media screen and (max-width: 767px) {
   .header_nav-list {
     display: none;
@@ -434,7 +429,7 @@ p {
     color: var(--hover-color);
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .header {
     height: 76px;
   }
@@ -455,8 +450,11 @@ p {
   }
 }
 .hiro {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 112px;
   padding-bottom: 112px;
+  max-width: 428px;
   background-color: var(--bg-color2);
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile/hirobg.jpg);
@@ -495,6 +493,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .hiro {
+    max-width: 768px;
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet/hirobg.jpg);
     background-size: 768px;
   }
@@ -510,10 +509,11 @@ p {
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet/hirobg@2x.jpg);
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .hiro {
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/desktop/hirobg.jpg);
     background-size: 1440px;
   }
@@ -522,7 +522,7 @@ p {
     margin-bottom: 48px;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px), screen and (min-resolution: 192dpi) and (min-width: 1158px), screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hiro {
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/desktop/hirobg@2x.jpg);
   }
@@ -674,7 +674,7 @@ p {
     gap: 72px 24px;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .projects_list {
     gap: 48px 24px;
   }
@@ -705,7 +705,7 @@ p {
   color: var(--text-color2);
 }
 
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 1200px) {
   .quality_icon-box {
     display: none;
   }
@@ -727,7 +727,7 @@ p {
     text-align: start;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .quality.section {
     padding-bottom: 0px;
   }
@@ -767,7 +767,7 @@ p {
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 1199px) {
   .what-we-do {
     display: none;
   }
@@ -816,7 +816,7 @@ p {
     width: 168px;
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
   .customers_icon-list {
     justify-content: space-between;
     gap: 0px;
@@ -902,10 +902,19 @@ p {
   position: relative;
 }
 
+@media screen and (max-height: 524px) {
+  .modal_input {
+    height: 30px;
+  }
+}
+@media screen and (min-height: 525px) {
+  .modal_input {
+    height: 40px;
+  }
+}
 .modal_input {
   padding-left: 38px;
   width: 100%;
-  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -930,9 +939,19 @@ p {
   margin-bottom: 16px;
 }
 
+@media screen and (max-height: 599px) {
+  .modal_message {
+    height: 40px;
+  }
+}
+@media screen and (min-height: 600px) {
+  .modal_message {
+    height: 120px;
+  }
+}
 .modal_message {
+  display: block;
   padding: 8px 16px;
-  height: 120px;
   width: 100%;
   resize: none;
   outline: none;
